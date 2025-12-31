@@ -1,6 +1,10 @@
 # KafkaReplicationEndpoint（HBase Replication -> Kafka）
-本文档说明怎么实时读取HBASE数据写到Kafka 给后续实时ETL做准备
+简介：
+ 本文档说明怎么实时读取HBASE数据写到Kafka 给后续实时ETL做准备
  以及 [KafkaReplicationEndpoint.java]的实现逻辑、部署方式，以及在 HBase 侧开启复制并验证写入 Kafka 的完整步骤。
+技术架构：
+ 使用HBASE WAL日志数据实时增量推送至Kafka
+
 
 ## 1. 这个 Endpoint 做了什么
 
